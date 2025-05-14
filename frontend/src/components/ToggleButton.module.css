@@ -1,0 +1,39 @@
+Here's the CSS module for the ToggleButton component:
+
+ToggleButton.module.css:
+```css
+/* ToggleButton.module.css */
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-button:hover {
+  opacity: 0.8;
+}
+```
+This CSS module provides the necessary styles for the ToggleButton component. The '.toggle-button' class styles the button with padding, font size, color, background color, border style, and cursor style. It also adds a transition effect to the background color. 
+
+The ':hover' pseudo-class is used to change the opacity of the button when the user hovers over it. This gives the button a more interactive feel.
+
+The 'border-radius' property is used to give the button a rounded appearance.
+
+Remember to import this CSS module in your component file:
+
+```jsx
+import styles from './ToggleButton.module.css';
+```
+And use the styles like this:
+
+```jsx
+<button id="toggle-button" className={styles['toggle-button']} onClick={handleClick}>
+  {buttonText}
+</button>
+```
