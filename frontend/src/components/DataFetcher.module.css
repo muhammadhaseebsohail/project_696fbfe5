@@ -1,0 +1,65 @@
+We can define a CSS module to add some basic styling to the DataFetcher component. 
+
+Create a file named `DataFetcher.module.css` in the same directory as your component. Here's a sample CSS module you might use:
+
+```css
+/* DataFetcher.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  margin: 20px;
+}
+
+.loading {
+  color: #2d2d2d;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+}
+
+.data {
+  color: #2d2d2d;
+  font-family: 'Courier New', Courier, monospace;
+}
+```
+
+Then, import and apply these styles to your component like so:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import styles from './DataFetcher.module.css';
+
+const DataFetcher = ({ url }) => {
+  // ...state variables and fetchData function...
+
+  useEffect(() => {
+    fetchData();
+  }, [url]);
+
+  if (loading) return <div className={styles.loading}>Loading...</div>;
+  if (error) return <div className={styles.error}>Error: {error.message}</div>;
+
+  return (
+    <div className={styles.container}>
+      <pre className={styles.data}>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+};
+
+DataFetcher.propTypes = {
+  url: PropTypes.string.isRequired,
+};
+
+export default DataFetcher;
+```
+
+With these styles, the loading and error messages are darker and bolded to stand out, while the fetched data is displayed in a monospace font. The container around the fetched data is also given some padding, a border radius, and a light shadow for a bit of depth.
