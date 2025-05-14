@@ -1,0 +1,35 @@
+Based on the given React component, here is the CSS module styling:
+
+BasicHTMLStructure.module.css
+
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 20px;
+  color: #333;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+```
+
+This CSS module provides the necessary styling for the BasicHTMLStructure component. It sets up a flex container with a column direction and makes sure the main content area grows to fill the available space. The header and footer have a light background color, a padding, and centered text. The text color across all sections is a dark grey.
