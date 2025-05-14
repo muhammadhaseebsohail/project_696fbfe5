@@ -1,0 +1,37 @@
+Sure, here is the CSS module that matches the component's needs:
+
+```css
+/* Task.module.css */
+.task {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.task h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.task ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task ul li {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+```
+
+This CSS module provides the following styling:
+
+- The `.task` class gives the task a light grey background, a small shadow, and rounded corners for a card-like appearance. It also adds some padding and bottom margin for spacing.
+- The `.task h1` class styles the task name, making it slightly larger and darker than the default.
+- The `.task ul` class removes the default list styling.
+- The `.task ul li` class styles the individual requirements, making them a bit larger and spaced out, and slightly dark grey.
